@@ -2,7 +2,7 @@
 
 Aplicação base para o desenvolvimento de novos testes unitários com PyUnit.
 
-# A Cobertura de Testes
+## A Cobertura de Testes
 
 A cobertura de testes, também conhecida como cobertura de código, consiste na razão entre o número de linhas executadas por ao menos um caso de teste e o número total de linhas existentes:
 
