@@ -1,4 +1,4 @@
-# Flask App e PyUnit
+# Testes Unitários de Software
 
 Aplicação base para o desenvolvimento de novos testes unitários com PyUnit.
 
