@@ -10,3 +10,13 @@ class AppTest(unittest.TestCase):
         self.assertEqual(200, response.status_code, "Erro no test_http_code!")
         self.assertEqual("<h1>Hello, I'm Alive!</h1>", response.get_data(as_text=True)
                           , "Erro no test_print_health_check!")
+
+    def test_print_hello_success(self):
+        response = self.app.get('/hello?name=Cássio')
+        self.assertEqual(200, response.status_code, "Erro no status code do sucesso!")
+        self.assertEqual("Hello, Cássio!", response.get_data(as_text=True), "Erro no texto de sucesso!")
+
+    def test_print_hello_error(self):
+        response = self.app.get('/hello')
+        self.assertEqual(400, response.status_code, "Erro: Status code incorreto para falta de parâmetro!")
+        self.assertEqual("Nome não informado", response.get_data(as_text=True), "Erro: Mensagem de falha incorreta!")
